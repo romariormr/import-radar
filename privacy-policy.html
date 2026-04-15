@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidade — Import Radar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+      line-height: 1.7;
+      padding: 40px 20px 80px;
+    }
+    .container { max-width: 760px; margin: 0 auto; }
+    .badge {
+      display: inline-block;
+      background: #ff7a00;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      letter-spacing: 0.5px;
+    }
+    h1 { font-size: 28px; color: #fff; margin-bottom: 6px; }
+    .subtitle { color: #888; font-size: 14px; margin-bottom: 40px; }
+    h2 {
+      font-size: 17px;
+      color: #ff922e;
+      margin: 36px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #222;
+    }
+    h3 { font-size: 15px; color: #ccc; margin: 20px 0 8px; }
+    p { margin-bottom: 12px; color: #bbb; }
+    ul { padding-left: 20px; margin-bottom: 12px; }
+    li { color: #bbb; margin-bottom: 6px; }
+    .highlight {
+      background: #1a1a1a;
+      border-left: 3px solid #ff7a00;
+      padding: 14px 18px;
+      border-radius: 4px;
+      margin: 16px 0;
+      color: #ccc;
+      font-size: 14px;
+    }
+    .ok   { color: #4ade80; font-weight: 600; }
+    .warn { color: #facc15; font-weight: 600; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 14px;
+    }
+    th {
+      text-align: left;
+      background: #1a1a1a;
+      color: #ff922e;
+      padding: 10px 14px;
+      font-weight: 600;
+    }
+    td { padding: 10px 14px; border-bottom: 1px solid #1e1e1e; color: #bbb; }
+    tr:last-child td { border-bottom: none; }
+    .lang-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 8px;
+    }
+    .lang-btn {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      color: #ccc;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    .lang-btn.active { background: #ff7a00; border-color: #ff7a00; color: #fff; }
+    .lang-en { display: none; }
+    footer {
+      margin-top: 60px;
+      padding-top: 20px;
+      border-top: 1px solid #222;
+      color: #555;
+      font-size: 13px;
+    }
+    a { color: #ff922e; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('pt')">🇧🇷 PT</button>
+  <button class="lang-btn"        onclick="setLang('en')">🇺🇸 EN</button>
+</div>
+
+<!-- ═══════════════════ PORTUGUÊS ═══════════════════ -->
+<div class="lang-pt">
+<div class="container">
+
+  <div class="badge">Extensão Chrome</div>
+  <h1>Política de Privacidade</h1>
+  <p class="subtitle">Import Radar · Última atualização: abril de 2026</p>
+
+  <div class="highlight">
+    <strong>Resumo direto:</strong> A extensão <strong>não coleta, não armazena em servidor e não compartilha dados pessoais</strong>. Tudo fica no seu navegador. As únicas chamadas externas são para buscar a cotação do yuan e traduzir títulos de produtos.
+  </div>
+
+  <!-- 1 -->
+  <h2>1. O que é o Import Radar</h2>
+  <p>
+    O <strong>Import Radar</strong> é uma extensão gratuita para Chrome que ajuda compradores brasileiros (e de outros países) a navegar no marketplace <strong>Goofish</strong> (Xianyu / 闲鱼) da Alibaba — o maior marketplace de usados da China — com informações relevantes para quem compra de fora da China:
+  </p>
+  <ul>
+    <li>Verifica se smartphones e outros eletrônicos são <strong>compatíveis com as redes do seu país</strong> (ex: Banda 28 para Brasil, Argentina, etc.)</li>
+    <li>Converte preços de <strong>yuan (¥ CNY) para reais (R$ BRL)</strong> em tempo real</li>
+    <li>Indica <strong>onde comprar</strong> via agente de importação (<a href="https://www.cssbuy.com/romariobrito" target="_blank">CSSBuy</a>)</li>
+    <li>Indica <strong>onde comprar yuan chinês</strong> para pagar o produto (<a href="https://bytemax.exchange?ref=D252BD1D" target="_blank">Bytemax</a>)</li>
+    <li>Monitora listas de vendedores e alerta quando novos produtos chegam</li>
+    <li>Exibe botão de compra em outros sites de compras chineses (Taobao, Tmall, 1688, Weidian)</li>
+  </ul>
+
+  <!-- 2 -->
+  <h2>2. O que a extensão lê nas páginas</h2>
+  <p>A extensão lê o conteúdo <strong>visível das páginas</strong> dos seguintes sites para extrair informações de produto:</p>
+
+  <table>
+    <tr>
+      <th>Site</th>
+      <th>O que é lido</th>
+      <th>Para quê</th>
+    </tr>
+    <tr>
+      <td>goofish.com</td>
+      <td>Título, preço, modelo, specs, fotos do produto</td>
+      <td>Filtros, compatibilidade, conversão de preço, alertas</td>
+    </tr>
+    <tr>
+      <td>taobao.com / tmall.com</td>
+      <td>URL da página atual</td>
+      <td>Gerar link de compra via CSSBuy (somente ID do produto)</td>
+    </tr>
+    <tr>
+      <td>1688.com</td>
+      <td>URL da página atual</td>
+      <td>Gerar link de compra via CSSBuy (somente ID do produto)</td>
+    </tr>
+    <tr>
+      <td>weidian.com</td>
+      <td>URL da página atual</td>
+      <td>Gerar link de compra via CSSBuy (somente ID do produto)</td>
+    </tr>
+  </table>
+
+  <div class="highlight">
+    <span class="ok">✔</span> Nenhum dado lido das páginas é enviado para servidores externos. O processamento ocorre inteiramente no seu navegador.
+  </div>
+
+  <!-- 3 -->
+  <h2>3. Chamadas para serviços externos</h2>
+  <p>A extensão faz chamadas para dois serviços externos. <strong>Nenhum dado pessoal é enviado</strong>:</p>
+
+  <table>
+    <tr>
+      <th>Serviço</th>
+      <th>URL</th>
+      <th>O que é enviado</th>
+      <th>Para quê</th>
+    </tr>
+    <tr>
+      <td><strong>Frankfurter API</strong></td>
+      <td>api.frankfurter.app</td>
+      <td>Nenhum dado pessoal — apenas requisição de cotação CNY→BRL</td>
+      <td>Exibir preços em reais atualizados</td>
+    </tr>
+    <tr>
+      <td><strong>Google Translate</strong></td>
+      <td>translate.googleapis.com</td>
+      <td>Título do produto em chinês (quando você clica em "Traduzir")</td>
+      <td>Traduzir títulos de produtos do chinês para português</td>
+    </tr>
+  </table>
+
+  <div class="highlight">
+    <span class="warn">⚠</span> Quando você clica em <strong>"Traduzir"</strong> em um card, o título do produto em chinês é enviado ao Google Translate. Isso é feito pela API pública do Google (sem autenticação). Consulte a <a href="https://policies.google.com/privacy" target="_blank">Política de Privacidade do Google</a> para entender como eles tratam esses dados.
+  </div>
+
+  <!-- 4 -->
+  <h2>4. O que é salvo localmente</h2>
+  <p>A extensão usa <code>chrome.storage.local</code> para salvar dados <strong>apenas no seu navegador</strong>, nunca em servidores externos:</p>
+
+  <table>
+    <tr>
+      <th>Dado salvo</th>
+      <th>Para quê</th>
+      <th>Onde fica</th>
+    </tr>
+    <tr>
+      <td>Favoritos de produtos</td>
+      <td>Guardar produtos que você marcou</td>
+      <td>Seu navegador (local)</td>
+    </tr>
+    <tr>
+      <td>Alertas configurados</td>
+      <td>Modelo, preço máximo, vendedor para monitorar</td>
+      <td>Seu navegador (local)</td>
+    </tr>
+    <tr>
+      <td>Vendedores cadastrados</td>
+      <td>Lista de vendedores que você acompanha</td>
+      <td>Seu navegador (local)</td>
+    </tr>
+    <tr>
+      <td>Histórico de preços</td>
+      <td>Detectar queda de preço em produtos visitados</td>
+      <td>Seu navegador (local)</td>
+    </tr>
+    <tr>
+      <td>Configurações (câmbio, país, filtros)</td>
+      <td>Lembrar suas preferências entre sessões</td>
+      <td>Seu navegador (local)</td>
+    </tr>
+    <tr>
+      <td>Correspondências de alertas</td>
+      <td>Resultados do monitor automático</td>
+      <td>Seu navegador (local)</td>
+    </tr>
+  </table>
+
+  <div class="highlight">
+    <span class="ok">✔</span> Esses dados ficam <strong>exclusivamente no seu navegador</strong>. Você pode apagá-los a qualquer momento em <code>chrome://extensions</code> → Import Radar → Limpar dados.
+  </div>
+
+  <!-- 5 -->
+  <h2>5. Compatibilidade com redes de celular</h2>
+  <p>
+    A extensão verifica se um smartphone vendido no Goofish é compatível com as redes de telefonia do seu país. Isso é especialmente importante porque <strong>muitos celulares vendidos na China possuem versões bloqueadas</strong> para redes chinesas e não funcionam corretamente em outros países.
+  </p>
+  <p>A verificação de compatibilidade:</p>
+  <ul>
+    <li>É feita <strong>localmente</strong>, usando um banco de dados embutido na extensão com modelos de iPhone (A-numbers) e suas bandas de frequência</li>
+    <li>Verifica bandas 4G (LTE) e 5G contra o perfil do país selecionado</li>
+    <li>Para o Brasil: verifica especialmente a <strong>Banda 28 (700 MHz)</strong>, essencial para cobertura Claro, Vivo, TIM e Oi no interior</li>
+    <li>Nenhum dado do seu celular, operadora ou localização é coletado</li>
+  </ul>
+
+  <!-- 6 -->
+  <h2>6. Links de afiliados</h2>
+  <p>
+    A extensão contém links de afiliado para <strong>CSSBuy</strong> e <strong>Bytemax</strong>. Quando você clica nesses links e realiza uma compra, o desenvolvedor pode receber uma comissão.
+  </p>
+  <ul>
+    <li><strong>CSSBuy</strong> — agente de importação que recebe produtos na China e envia para o Brasil. Link de afiliado: <code>cssbuy.com/romariobrito</code></li>
+    <li><strong>Bytemax</strong> — plataforma para compra de yuan chinês (CNY) via PIX. Link de afiliado: <code>bytemax.exchange?ref=D252BD1D</code></li>
+  </ul>
+  <p>
+    Os links de afiliado são gerados <strong>localmente no seu navegador</strong> a partir do ID do produto na URL. Nenhum servidor intermediário é usado. Você não é rastreado pelo desenvolvedor da extensão.
+  </p>
+
+  <!-- 7 -->
+  <h2>7. Monitoramento de sites de compras</h2>
+  <p>
+    A extensão também funciona nas seguintes plataformas de compras chinesas para exibir um botão de compra rápida via CSSBuy:
+  </p>
+  <ul>
+    <li><strong>Taobao</strong> (taobao.com) — maior marketplace da China</li>
+    <li><strong>Tmall</strong> (tmall.com) — marketplace de marcas oficiais</li>
+    <li><strong>1688</strong> (1688.com) — marketplace atacadista B2B</li>
+    <li><strong>Weidian</strong> (weidian.com) — loja independente chinesa</li>
+  </ul>
+  <p>
+    Nesses sites, a extensão lê <strong>apenas a URL da página atual</strong> para extrair o ID do produto e gerar o link de compra. Nenhum conteúdo adicional da página é lido ou enviado.
+  </p>
+
+  <!-- 8 -->
+  <h2>8. Permissões usadas</h2>
+  <table>
+    <tr>
+      <th>Permissão</th>
+      <th>Por quê é necessária</th>
+    </tr>
+    <tr>
+      <td><code>activeTab</code></td>
+      <td>Ler o conteúdo da aba ativa (produto do Goofish)</td>
+    </tr>
+    <tr>
+      <td><code>scripting</code></td>
+      <td>Injetar o script de coleta de dados na página do Goofish</td>
+    </tr>
+    <tr>
+      <td><code>storage</code></td>
+      <td>Salvar favoritos, alertas e configurações localmente</td>
+    </tr>
+    <tr>
+      <td><code>notifications</code></td>
+      <td>Enviar notificação desktop quando um alerta encontrar produto</td>
+    </tr>
+    <tr>
+      <td><code>alarms</code></td>
+      <td>Executar o monitor automático de alertas em intervalos configurados</td>
+    </tr>
+    <tr>
+      <td><code>tabs</code></td>
+      <td>Detectar navegação SPA no Goofish para re-escanear automaticamente</td>
+    </tr>
+    <tr>
+      <td><code>sidePanel</code></td>
+      <td>Abrir o painel lateral nativo do Chrome</td>
+    </tr>
+  </table>
+
+  <!-- 9 -->
+  <h2>9. O que a extensão NÃO faz</h2>
+  <ul>
+    <li><span class="ok">✔</span> Não coleta dados pessoais (nome, e-mail, CPF, localização GPS)</li>
+    <li><span class="ok">✔</span> Não rastreia seu histórico de navegação</li>
+    <li><span class="ok">✔</span> Não envia dados para servidores do desenvolvedor</li>
+    <li><span class="ok">✔</span> Não vende dados para terceiros</li>
+    <li><span class="ok">✔</span> Não acessa senhas, cartões ou dados bancários</li>
+    <li><span class="ok">✔</span> Não lê e-mails ou outras abas abertas</li>
+    <li><span class="ok">✔</span> Não injeta anúncios ou modifica o conteúdo do Goofish</li>
+  </ul>
+
+  <!-- 10 -->
+  <h2>10. Segurança</h2>
+  <p>
+    Todo HTML gerado dinamicamente pela extensão é sanitizado com uma função de escape antes de ser inserido na página, prevenindo ataques de injeção de código (XSS). A extensão não usa <code>eval()</code> nem executa código JavaScript externo.
+  </p>
+
+  <!-- 11 -->
+  <h2>11. Crianças</h2>
+  <p>
+    Esta extensão não é destinada a pessoas com menos de 13 anos e não coleta dados de crianças intencionalmente.
+  </p>
+
+  <!-- 12 -->
+  <h2>12. Alterações nesta política</h2>
+  <p>
+    Qualquer alteração nesta política será publicada nesta página com a data de atualização. O uso continuado da extensão após alterações constitui aceitação das novas condições.
+  </p>
+
+  <!-- 13 -->
+  <h2>13. Contato</h2>
+  <p>
+    Dúvidas sobre privacidade? Entre em contato pelo repositório do projeto:<br>
+    <a href="https://github.com/romariormr/goofish-br-radar/issues" target="_blank">github.com/romariormr/goofish-br-radar/issues</a>
+  </p>
+
+  <footer>
+    © 2026 Import Radar — Desenvolvido por <a href="https://github.com/romariormr" target="_blank">romariormr</a><br>
+    Esta extensão não é afiliada ao Goofish, Alibaba, CSSBuy, Bytemax ou Google.
+  </footer>
+
+</div>
+</div>
+
+<!-- ═══════════════════ ENGLISH ═══════════════════ -->
+<div class="lang-en" style="display:none">
+<div class="container">
+
+  <div class="badge">Chrome Extension</div>
+  <h1>Privacy Policy</h1>
+  <p class="subtitle">Import Radar · Last updated: April 2026</p>
+
+  <div class="highlight">
+    <strong>Quick summary:</strong> This extension <strong>does not collect, store on servers, or share personal data</strong>. Everything stays in your browser. The only external calls are to fetch the yuan exchange rate and to translate product titles.
+  </div>
+
+  <h2>1. What is Import Radar</h2>
+  <p>
+    <strong>Import Radar</strong> is a free Chrome extension that helps buyers outside China navigate the <strong>Goofish</strong> (Xianyu / 闲鱼) marketplace from Alibaba — China's largest second-hand marketplace — with relevant information for international buyers:
+  </p>
+  <ul>
+    <li>Checks if smartphones and electronics are <strong>compatible with your country's mobile networks</strong> (e.g. Band 28 for Brazil, Argentina, etc.)</li>
+    <li>Converts prices from <strong>yuan (¥ CNY) to your local currency</strong> in real time</li>
+    <li>Shows <strong>where to buy</strong> via a shipping agent (<a href="https://www.cssbuy.com/romariobrito" target="_blank">CSSBuy</a>)</li>
+    <li>Shows <strong>where to buy Chinese yuan</strong> to pay for the product (<a href="https://bytemax.exchange?ref=D252BD1D" target="_blank">Bytemax</a>)</li>
+    <li>Monitors seller lists and alerts when new matching products appear</li>
+    <li>Shows a buy button on other Chinese shopping platforms (Taobao, Tmall, 1688, Weidian)</li>
+  </ul>
+
+  <h2>2. What the extension reads on pages</h2>
+  <p>The extension reads the <strong>visible content</strong> of the following websites to extract product information:</p>
+  <table>
+    <tr><th>Site</th><th>What is read</th><th>Purpose</th></tr>
+    <tr><td>goofish.com</td><td>Title, price, model, specs, product images</td><td>Filters, compatibility check, price conversion, alerts</td></tr>
+    <tr><td>taobao.com / tmall.com</td><td>Current page URL only</td><td>Generate CSSBuy purchase link (product ID only)</td></tr>
+    <tr><td>1688.com</td><td>Current page URL only</td><td>Generate CSSBuy purchase link (product ID only)</td></tr>
+    <tr><td>weidian.com</td><td>Current page URL only</td><td>Generate CSSBuy purchase link (product ID only)</td></tr>
+  </table>
+  <div class="highlight">
+    <span class="ok">✔</span> No data read from pages is sent to external servers. All processing happens entirely in your browser.
+  </div>
+
+  <h2>3. Calls to external services</h2>
+  <p>The extension makes calls to two external services. <strong>No personal data is sent</strong>:</p>
+  <table>
+    <tr><th>Service</th><th>URL</th><th>What is sent</th><th>Purpose</th></tr>
+    <tr><td><strong>Frankfurter API</strong></td><td>api.frankfurter.app</td><td>No personal data — just a CNY→BRL rate request</td><td>Show real-time prices in your currency</td></tr>
+    <tr><td><strong>Google Translate</strong></td><td>translate.googleapis.com</td><td>Product title in Chinese (when you click "Translate")</td><td>Translate product titles from Chinese to Portuguese</td></tr>
+  </table>
+  <div class="highlight">
+    <span class="warn">⚠</span> When you click <strong>"Translate"</strong> on a product card, the Chinese product title is sent to Google Translate (public API, no authentication). See <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a> for how they handle this data.
+  </div>
+
+  <h2>4. What is saved locally</h2>
+  <p>The extension uses <code>chrome.storage.local</code> to save data <strong>only in your browser</strong>, never on external servers:</p>
+  <table>
+    <tr><th>Saved data</th><th>Purpose</th><th>Location</th></tr>
+    <tr><td>Favorited products</td><td>Keep products you saved</td><td>Your browser (local)</td></tr>
+    <tr><td>Configured alerts</td><td>Model, max price, seller to monitor</td><td>Your browser (local)</td></tr>
+    <tr><td>Saved sellers</td><td>List of sellers you follow</td><td>Your browser (local)</td></tr>
+    <tr><td>Price history</td><td>Detect price drops on visited products</td><td>Your browser (local)</td></tr>
+    <tr><td>Settings (exchange rate, country, filters)</td><td>Remember your preferences between sessions</td><td>Your browser (local)</td></tr>
+    <tr><td>Alert matches</td><td>Results from the automatic monitor</td><td>Your browser (local)</td></tr>
+  </table>
+  <div class="highlight">
+    <span class="ok">✔</span> This data stays <strong>exclusively in your browser</strong>. You can delete it anytime at <code>chrome://extensions</code> → Import Radar → Clear data.
+  </div>
+
+  <h2>5. Mobile network compatibility</h2>
+  <p>
+    The extension checks whether a smartphone sold on Goofish is compatible with the mobile networks of your country. This matters because <strong>many phones sold in China are carrier-locked</strong> or lack the frequency bands used in other countries.
+  </p>
+  <ul>
+    <li>Compatibility check is done <strong>locally</strong>, using a database embedded in the extension (iPhone A-numbers and their frequency bands)</li>
+    <li>Verifies 4G (LTE) and 5G bands against the selected country profile</li>
+    <li>For Brazil: specifically checks <strong>Band 28 (700 MHz)</strong>, critical for Claro, Vivo, TIM and Oi rural coverage</li>
+    <li>No data about your phone, carrier, or location is collected</li>
+  </ul>
+
+  <h2>6. Affiliate links</h2>
+  <p>The extension contains affiliate links for <strong>CSSBuy</strong> and <strong>Bytemax</strong>. When you click these links and make a purchase, the developer may receive a commission.</p>
+  <ul>
+    <li><strong>CSSBuy</strong> — import agent that receives products in China and ships internationally. Affiliate link: <code>cssbuy.com/romariobrito</code></li>
+    <li><strong>Bytemax</strong> — platform to buy Chinese yuan (CNY) via PIX. Affiliate link: <code>bytemax.exchange?ref=D252BD1D</code></li>
+  </ul>
+  <p>Affiliate links are generated <strong>locally in your browser</strong> from the product ID in the URL. No intermediary server is used. You are not tracked by the extension developer.</p>
+
+  <h2>7. Monitoring Chinese shopping sites</h2>
+  <p>The extension also works on the following Chinese shopping platforms to show a quick buy button via CSSBuy:</p>
+  <ul>
+    <li><strong>Taobao</strong> (taobao.com)</li>
+    <li><strong>Tmall</strong> (tmall.com)</li>
+    <li><strong>1688</strong> (1688.com)</li>
+    <li><strong>Weidian</strong> (weidian.com)</li>
+  </ul>
+  <p>On these sites, the extension reads <strong>only the current page URL</strong> to extract the product ID and generate the purchase link. No additional page content is read or transmitted.</p>
+
+  <h2>8. What the extension does NOT do</h2>
+  <ul>
+    <li><span class="ok">✔</span> Does not collect personal data (name, email, location, ID numbers)</li>
+    <li><span class="ok">✔</span> Does not track your browsing history</li>
+    <li><span class="ok">✔</span> Does not send data to the developer's servers</li>
+    <li><span class="ok">✔</span> Does not sell data to third parties</li>
+    <li><span class="ok">✔</span> Does not access passwords, cards, or banking data</li>
+    <li><span class="ok">✔</span> Does not read emails or other open tabs</li>
+    <li><span class="ok">✔</span> Does not inject ads or modify Goofish content</li>
+  </ul>
+
+  <h2>9. Contact</h2>
+  <p>
+    Privacy questions? Open an issue on the project repository:<br>
+    <a href="https://github.com/romariormr/goofish-br-radar/issues" target="_blank">github.com/romariormr/goofish-br-radar/issues</a>
+  </p>
+
+  <footer>
+    © 2026 Import Radar — Developed by <a href="https://github.com/romariormr" target="_blank">romariormr</a><br>
+    This extension is not affiliated with Goofish, Alibaba, CSSBuy, Bytemax, or Google.
+  </footer>
+
+</div>
+</div>
+
+<script>
+function setLang(lang) {
+  document.querySelector('.lang-pt').style.display = lang === 'pt' ? '' : 'none';
+  document.querySelector('.lang-en').style.display = lang === 'en' ? '' : 'none';
+  document.querySelectorAll('.lang-btn').forEach((b, i) => {
+    b.classList.toggle('active', (i === 0 && lang === 'pt') || (i === 1 && lang === 'en'));
+  });
+}
+</script>
+</body>
+</html>
