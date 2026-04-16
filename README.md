@@ -63,16 +63,6 @@ Configure alertas por modelo, storage, cor e preço máximo. A extensão monitor
 ![Screenshot 2](store-assets/store-screenshot-75.png)
 ![Screenshot 3](store-assets/store-screenshot-78.png)
 
----
-
-## Instalação manual (modo desenvolvedor)
-
-Se preferir instalar sem a Chrome Web Store:
-
-1. Baixe o zip da [última release](https://github.com/romariormr/import-radar/releases/latest)
-2. Extraia em uma pasta
-3. Abra `chrome://extensions` e ative o **Modo do desenvolvedor**
-4. Clique em **Carregar sem compactação** e selecione a pasta
 
 > Usando a Chrome Web Store você recebe atualizações automáticas — recomendado.
 
