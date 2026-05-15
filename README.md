@@ -14,7 +14,7 @@ Filtra produtos por perfil, verifica compatibilidade de rede com o Brasil, mostr
 
 **Compatível com Chrome e Brave.**
 
-> **Versão atual: v14.4** (2026-05-15) — veja [Novidades](#novidades) abaixo.
+> **Versão atual: v14.5** (2026-05-15) — veja [Novidades](#novidades) abaixo.
 
 ---
 
@@ -96,6 +96,11 @@ Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/romar
 ---
 
 ## Novidades
+
+### v14.5 — 2026-05-15
+- **⚡ Varredura ignora vendidos**: vendedor com 942 itens (3 ativos + 939 vendidos com placeholder cinza `卖掉了`) agora gera só 3 cards. Antes a extensão carregava todos os 942.
+- **🏆 Badge de nível do vendedor (L1–L7)**: o Goofish atribui um nível de loja (`小铺LN`) — L7 é a elite. O banner do vendedor agora mostra esse badge ao lado do nome (L7 dourado, L6 prata, L5 azul, demais neutro). Útil para priorizar lojas consolidadas.
+- **🐟 Modo Limpo oculta peixinho de pesquisa**: o mascote flutuante de pesquisa de satisfação (`满意度调研`) que ficava bottom-right agora some quando o Modo Limpo está ativo.
 
 ### v14.4 — 2026-05-15
 Parser de modelo ampliado para vendedores de fotografia, gaming, áudio e e-readers. Novos chips dinâmicos cobrindo:
