@@ -14,7 +14,7 @@ Filtra produtos por perfil, verifica compatibilidade de rede com o Brasil, mostr
 
 **Compatível com Chrome e Brave.**
 
-> **Versão atual: v14.2** (2026-05-15) — veja [Novidades](#novidades) abaixo.
+> **Versão atual: v14.3** (2026-05-15) — veja [Novidades](#novidades) abaixo.
 
 ---
 
@@ -96,6 +96,9 @@ Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/romar
 ---
 
 ## Novidades
+
+### v14.3 — 2026-05-15
+- **Fix**: chips dinâmicos de modelo (`Apple Watch SE 2 (21)`, `iPhone 17 Pro (12)`, etc.) agora aparecem também no perfil **🔍 Qualquer**. Antes, só perfis específicos populavam os chips — o "Qualquer" deixava a área vazia.
 
 ### v14.2 — 2026-05-15
 - **Fix**: perfil **🔍 Qualquer** não troca mais sozinho ao terminar o scan. Reportado pelo usuário: ao varrer uma página de vendedor com "Qualquer", o perfil era trocado automaticamente para Android. Removido o bloco legado que fazia essa auto-troca. O **banner de sugestão** da v14.1 continua ativo para o caso útil (quando um perfil específico zera resultados, oferece troca com botão).
