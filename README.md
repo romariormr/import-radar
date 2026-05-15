@@ -14,7 +14,7 @@ Filtra produtos por perfil, verifica compatibilidade de rede com o Brasil, mostr
 
 **Compatível com Chrome e Brave.**
 
-> **Versão atual: v14.5** (2026-05-15) — veja [Novidades](#novidades) abaixo.
+> **Versão atual: v14.6** (2026-05-15) — veja [Novidades](#novidades) abaixo.
 
 ---
 
@@ -96,6 +96,9 @@ Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/romar
 ---
 
 ## Novidades
+
+### v14.6 — 2026-05-15
+- **Fix**: vendidos ainda vazavam apesar do filtro da v14.5. Causa descoberta via inspeção Playwright: o placeholder `卖掉了` no card é **imagem**, não texto. Agora o DOM consulta um cache cumulativo `apiKnownItems` que sabe quais `itemId` estão vendidos, e usa marcadores de imagem (`fleamarket.jpg` no src) como sinal secundário. Validado: vendedor com 942 itens (3 ativos) agora retorna exatamente 3.
 
 ### v14.5 — 2026-05-15
 - **⚡ Varredura ignora vendidos**: vendedor com 942 itens (3 ativos + 939 vendidos com placeholder cinza `卖掉了`) agora gera só 3 cards. Antes a extensão carregava todos os 942.
