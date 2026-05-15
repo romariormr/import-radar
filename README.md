@@ -14,7 +14,7 @@ Filtra produtos por perfil, verifica compatibilidade de rede com o Brasil, mostr
 
 **Compatível com Chrome e Brave.**
 
-> **Versão atual: v14.3** (2026-05-15) — veja [Novidades](#novidades) abaixo.
+> **Versão atual: v14.4** (2026-05-15) — veja [Novidades](#novidades) abaixo.
 
 ---
 
@@ -96,6 +96,15 @@ Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/romar
 ---
 
 ## Novidades
+
+### v14.4 — 2026-05-15
+Parser de modelo ampliado para vendedores de fotografia, gaming, áudio e e-readers. Novos chips dinâmicos cobrindo:
+- **📷 Foto/Vídeo**: DJI (Mavic / Mini / Air / Avata / Osmo Action / Pocket / RS / Osmo Mobile / Goggles), GoPro Hero N + Max, Insta360 (X3/X4 / GO 3 / Ace Pro), Leica (Q3 / M11 / SL3), Hasselblad (X2D / 907X), Panasonic Lumix, OM System (Olympus)
+- **🎮 Gaming**: Nintendo Switch / Switch 2 / OLED, PS5 / PS5 Pro / Slim, Xbox Series X/S, Steam Deck + OLED, ROG Ally + X, Lenovo Legion Go
+- **🎧 Áudio**: AirPods Pro/Max, Sony WH-1000XM / WF-1000XM / LinkBuds, Bose QC / QuietComfort / SoundLink, Beats Studio / Solo / Fit Pro / Pill
+- **📖 E-readers**: Kindle Paperwhite / Oasis / Scribe, BOOX Go / Note Air / Tab / Palma
+
+Aliases chineses suportados (大疆, 徕卡, 哈苏, 松下, 奥林巴斯, 任天堂, 索尼, 联想, 文石).
 
 ### v14.3 — 2026-05-15
 - **Fix**: chips dinâmicos de modelo (`Apple Watch SE 2 (21)`, `iPhone 17 Pro (12)`, etc.) agora aparecem também no perfil **🔍 Qualquer**. Antes, só perfis específicos populavam os chips — o "Qualquer" deixava a área vazia.
