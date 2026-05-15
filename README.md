@@ -14,6 +14,8 @@ Filtra produtos por perfil, verifica compatibilidade de rede com o Brasil, mostr
 
 **Compatível com Chrome e Brave.**
 
+> **Versão atual: v14.1** (2026-05-15) — veja [Novidades](#novidades) abaixo.
+
 ---
 
 ## O que faz
@@ -35,7 +37,7 @@ Perfis pré-configurados para cada categoria:
 Para iPhones, verifica o modelo **A-number** contra a tabela oficial Apple — confirma suporte ao **Band 28 (700 MHz)** usado pelas operadoras brasileiras. Funciona para 500+ modelos.
 
 ### Detecção de bloqueio por operadora
-Detecta automaticamente iPhones bloqueados por operadora (有锁, carrier lock, SIM Bloqueado) e os marca com 🔒 — filtre para ocultar todos de uma vez.
+Detecta automaticamente iPhones bloqueados por operadora — incluindo **卡贴机 / 有锁卡贴** (locked com adaptador RSIM, que funciona na China mas não no Brasil), `有锁`, carrier lock e SIM Bloqueado — e os marca com 🔒. Filtre para ocultar todos de uma vez. Itens identificados como `纯无锁` (totalmente desbloqueado) recebem o selo ✓ correspondente.
 
 ### Preço em reais em tempo real
 Conversão CNY → BRL com taxa de mercado (Frankfurter) ou taxa customizada (ex: taxa CSSBuy). Filtro por preço mínimo e máximo em BRL ou CNY.
@@ -54,6 +56,18 @@ Specs e descrição traduzidos automaticamente para português.
 
 ### Monitor de vendedores
 Configure alertas por modelo, storage, cor e preço máximo. A extensão monitora automaticamente os vendedores salvos e notifica quando encontra correspondência.
+
+### Chips dinâmicos por modelo
+Após varrer uma página, a extensão gera automaticamente chips com os top 12 modelos encontrados (`iPhone 17 Pro Max (12)`, `iPad Air 5 (8)`, `Galaxy S24 (3)` …) — clique para filtrar e veja só o que importa.
+
+### Faixa de preço
+Quando um anúncio cobre múltiplas variantes (cor, storage) com preços diferentes — comum em lojas oficiais — o card exibe `¥X – ¥Y / R$min – R$max` em vez de só o preço mínimo.
+
+### Banner inteligente de troca de perfil
+Se o perfil ativo (ex: Smartphones) zera resultados mas a API trouxe itens de outra categoria (ex: 12 iPads), um banner sugere `📱 iPad` com botão direto para trocar.
+
+### Alerta de múltiplos modelos
+Anúncios que misturam 2+ modelos no mesmo item (`iPhone 17 e iPhone 17 Pro Max`, `13mini+14`, `苹果13和14`) recebem badge ⚠️ — você fica sabendo que o preço exibido pode não ser o do modelo que quer.
 
 ---
 
@@ -78,3 +92,27 @@ Veja a [Política de Privacidade](https://romariormr.github.io/goofish-privacy/)
 ## Suporte
 
 Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/romariormr/import-radar/issues).
+
+---
+
+## Novidades
+
+### v14.1 — 2026-05-15
+- **API-first scan**: a extensão agora intercepta as chamadas reais de API do Goofish em vez de parsear apenas o título dos cards. Resultado: dados muito mais completos (faixa de preço, tags de frete grátis, devolução grátis, envio em 48h).
+- **`⏳ Verificando bloqueio…`** em vez de "Compatível" otimista para itens 美版 sem marcador explícito — evita o engano de marcar como compatível e depois descobrir que era `卡贴机`.
+- **Detecção de `卡贴机` / `有锁卡贴`** como bloqueado (esses funcionam só na China com adaptador RSIM).
+- **Faixa de preço** `¥X – ¥Y` exibida nos cards quando aplicável.
+- **Badge ⚠️ Múltiplos modelos** para anúncios mistos.
+- **Chips dinâmicos** com top 12 modelos por contagem real.
+- **Banner de sugestão de perfil** quando o ativo zera resultados.
+- **Parser expandido**: iPad (Air/Pro/mini), Apple/Honor/Xiaomi Watch, câmeras Fujifilm/Nikon/Sony/Canon, tablets Lenovo Legion/MatePad/Galaxy Tab, MacBook M-series, ThinkPad, ROG.
+- **Robustez SPA**: MutationObserver aguarda o React renderizar antes do scan em `/personal`, `/search`, `/category`.
+
+### v13.9 — 2026-05-12
+- Removida a caixa de busca do painel — a busca do Goofish exige login com conta chinesa (passaporte) que estrangeiros não conseguem criar. Fluxo simplificado: usuário navega no Goofish e clica **Varrer**.
+
+### v13.x — Maio 2026
+- Dark mode v2 (cards, container de produto, carrossel).
+- Detecção automática do scan após clicar **Buscar**.
+
+> Para histórico técnico completo, consulte o repositório do código-fonte (privado).
