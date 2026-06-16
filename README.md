@@ -14,7 +14,7 @@ Filtra produtos por perfil, verifica compatibilidade de rede com o Brasil, mostr
 
 **Compatível com Chrome e Brave.**
 
-> **Versão atual: v14.6** (2026-05-15) — veja [Novidades](#novidades) abaixo.
+> **Versão atual: v14.7** (2026-05-18) — veja [Novidades](#novidades) abaixo.
 
 ---
 
@@ -42,8 +42,8 @@ Detecta automaticamente iPhones bloqueados por operadora — incluindo **卡贴�
 ### Preço em reais em tempo real
 Conversão CNY → BRL com taxa de mercado (Frankfurter) ou taxa customizada (ex: taxa CSSBuy). Filtro por preço mínimo e máximo em BRL ou CNY.
 
-### Watchlist — Itens e Lojas Salvos
-Salve produtos para comparar depois e monitore lojas favoritas — tudo dentro da extensão, sem precisar dos favoritos do navegador.
+### Watchlist — Itens, Lojas e Recomendadas
+Salve produtos para comparar depois e monitore lojas favoritas — tudo dentro da extensão, sem precisar dos favoritos do navegador. A sub-tab **⭐ Recomendadas** traz uma curadoria de lojas verificadas por nível Goofish (L1–L7), agrupadas por categoria. Ao abrir qualquer uma, o engine analisa o catálogo inteiro automaticamente (compatibilidade, lock, vendidos).
 
 ### Link direto para importação
 Botão **"Importar agora"** em cada card leva direto ao CSSBuy com o produto mapeado — plataforma que recebe o produto na China e envia ao Brasil.
@@ -96,6 +96,11 @@ Encontrou um bug ou tem uma sugestão? Abra uma [issue](https://github.com/romar
 ---
 
 ## Novidades
+
+### v14.7 — 2026-05-18
+- **⭐ Lojas Recomendadas**: nova sub-tab no Watchlist com curadoria oficial de lojas verificadas por nível Goofish (L1–L7), agrupada por categoria (iPhones Premium, Eletrônicos Variados, Custo-Benefício). Cada card mostra badge de nível, tags, notas e botões "Abrir loja" / "Salvar". Diferencial: ao clicar, o engine analisa o catálogo automaticamente.
+- **Hardening pré-publicação**: removida a permissão `tabs` (redundante com host_permissions), adicionado `minimum_chrome_version: "114"`.
+- **Fix de compatibilidade**: o A-number `A2218` estava duplicado na tabela Apple (iPhone 11 Pro China + 11 Pro Max Global). Corrigido — 11 Pro China agora usa o A-number correto (`A2217`).
 
 ### v14.6 — 2026-05-15
 - **Fix**: vendidos ainda vazavam apesar do filtro da v14.5. Causa descoberta via inspeção Playwright: o placeholder `卖掉了` no card é **imagem**, não texto. Agora o DOM consulta um cache cumulativo `apiKnownItems` que sabe quais `itemId` estão vendidos, e usa marcadores de imagem (`fleamarket.jpg` no src) como sinal secundário. Validado: vendedor com 942 itens (3 ativos) agora retorna exatamente 3.
